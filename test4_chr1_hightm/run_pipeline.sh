@@ -3,13 +3,14 @@
 CONFIG_FILE='config.yml'
 SNAKE_FILE='../workflow/Snakefile'
 CONDA_ENVS='../shared_conda_envs'
+CORES=8
 
 # # # activate conda environment (pre-activate)
 # conda activate paintshop_snakemake
 
 # run the pipeline
 snakemake --configfile $CONFIG_FILE --snakefile $SNAKE_FILE \
-    --use-conda --conda-prefix $CONDA_ENVS --cores 10 \
+    --use-conda --conda-prefix $CONDA_ENVS --cores $CORES \
     --restart-times 1
 
 # export PDF and svg visualizations of the DAG structure of pipeline steps

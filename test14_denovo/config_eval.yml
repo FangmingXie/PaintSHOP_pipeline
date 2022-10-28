@@ -1,0 +1,49 @@
+#
+# PaintSHOP Pipeline Run Configuration -- pipeline version v1.2
+#
+
+########################################################################
+#
+#  REQUIRED PARAMETERS
+#
+########################################################################
+
+
+# input file paths
+assembly: 'mm10'
+genome_fasta: 'data/mm10.fa'
+annotation_file: 'data/mm10.refGene.gtf'
+denovo_dir: 'pipeline_output/02_intermediate_files/02_init_probes_v3tm37-47' 
+version: "v3tm37-47tp37" # this determines the output structure
+
+########################################################################
+#
+#  OPTIONAL PARAMETERS (uncomment parameters to override defaults)
+#
+########################################################################
+
+
+# number of threads for bowtie2 to use
+# bowtie2_threads: 4
+
+# the temperature at which you want to predict probe hybridization with XGBoost
+# current options are: 37, 42, 47, 52, 60
+model_temp: 37 # 42
+
+# NUPACK 4 model specification https://piercelab-caltech.github.io/nupack-docs/model/#model-specification
+# nupack_material: 'dna'
+# nupack_ensemble: 'stacking'
+# nupack_celsius: 74.5
+# nupack_sodium: 0.39
+# nupack_magnesium: 0.0
+
+
+###############################################################
+#### These below doesn't matter #####
+###############################################################
+
+# # blockparse params (initial probe candidate mining)
+# blockparse_min_length: 30
+# blockparse_max_length: 30
+# blockparse_min_tm: 37
+# blockparse_max_tm: 47

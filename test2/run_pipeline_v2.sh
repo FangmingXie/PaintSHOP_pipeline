@@ -1,6 +1,6 @@
 
 # configure file paths
-CONFIG_FILE='config.yml'
+CONFIG_FILE='config2.yml'
 SNAKE_FILE='../workflow/Snakefile'
 CONDA_ENVS='../shared_conda_envs'
 

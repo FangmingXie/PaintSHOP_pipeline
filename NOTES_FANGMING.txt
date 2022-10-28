@@ -1,0 +1,4 @@
+explanations of diff versions:
+- test -- rerun example
+- test2 -- the correct genome and annotati:wq
+
